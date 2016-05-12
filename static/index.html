@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Databox Twitter Driver</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<script>
+			$.get('twitter/is-signed-in', {}, function(isSignedIn) {
+				if (isSignedIn === 'false')
+					window.location = "twitter/connect";
+				else
+					document.write('<h3>Twitter connected.</h3>');
+			});
+		</script>
+			
+	</body>
+</html>

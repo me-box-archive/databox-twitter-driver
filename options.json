@@ -1,0 +1,23 @@
+{
+	"endpoints": [
+		{
+			"method": "GET",
+			"url": "/twitter/api/*",
+			"description": "Forwards requests to twitter as defined at https://dev.twitter.com/rest/public.",
+			"parameters": [],
+			"response": {}
+		},
+		{
+			"method": "GET",
+			"url": "/twitter/connect",
+			"description": "Part of Flutter",
+			"parameters": []
+		},
+		{
+			"method": "GET",
+			"url": "/twitter/callback",
+			"description": "Part of Flutter",
+			"parameters": []
+		}
+	]
+}

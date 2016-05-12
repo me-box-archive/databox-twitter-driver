@@ -1,0 +1,34 @@
+{
+  "name": "databox-twitter-driver",
+  "version": "0.1.0",
+  "description": "The Databox Docker container that provides twitter data",
+  "scripts": {
+    "start": "lsc main.ls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yousefamar/databox-twitter-driver.git"
+  },
+  "keywords": [
+    "docker",
+    "databox",
+    "personal",
+    "data",
+    "twitter",
+    "driver"
+  ],
+  "author": "Yousef Amar <yousef@amar.io> (http://yousefamar.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yousefamar/databox-twitter-driver/issues"
+  },
+  "homepage": "https://github.com/yousefamar/databox-twitter-driver#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "flutter": "0.0.5",
+    "livescript": "^1.4.0"
+  }
+}
