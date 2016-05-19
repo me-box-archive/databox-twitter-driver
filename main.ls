@@ -13,22 +13,22 @@ app.use express.static 'static'
 
 app.use body-parser.urlencoded extended: false
 
-app.options \/ (req, res) !->
+app.options '/' (req, res) !->
   res.header 'Access-Control-Allow-Origin'  \*
   res.header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS'
   res.header 'Access-Control-Allow-Headers' 'Content-Type, Authorization, Content-Length, X-Requested-With'
   res.header 'Content-Type' 'application/json'
   res.send JSON.stringify options
 
-app.get \/status (req, res) !->
+app.get '/status' (req, res) !->
   res.header 'Access-Control-Allow-Origin' \*
   res.send if twitter.is-signed-in! then \active else \standby
 
-app.get '/twitter/connect' twitter.connect
+app.get '/connect' twitter.connect
 
-app.get '/twitter/callback' twitter.auth
+app.get '/callback' twitter.auth
 
-app.get '/twitter/api/*' (req, res) !->
+app.get '/api/*' (req, res) !->
   err, results <-! twitter.fetch req.params[0], req.body
   if err
     res.write-head 400
@@ -37,7 +37,7 @@ app.get '/twitter/api/*' (req, res) !->
   res.header 'Access-Control-Allow-Origin' \*
   results |> JSON.stringify |> res.end
 
-app.get '/twitter/is-signed-in' (req, res) !->
+app.get '/is-signed-in' (req, res) !->
   res.header 'Access-Control-Allow-Origin' \*
   res.end '' + twitter.is-signed-in!
 

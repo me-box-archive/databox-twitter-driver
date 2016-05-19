@@ -6,7 +6,7 @@ secret = null
 flutter = new Flutter do
   consumer-key:    \5aO0dzpWHz4tviFq68qjsyHkG
   consumer-secret: \lq6gr6n0Z8QsdeNfzw0mWam5lzckBIHTuLXrK47zDwATT83mPq
-  login-callback: 'http://localhost:8080/twitter/callback'
+  login-callback: 'http://localhost:8080/databox-twitter-driver/callback'
   cache: false
 
   auth-callback: (req, res, next) !->
@@ -18,7 +18,7 @@ flutter = new Flutter do
 
     # Store to file here
 
-    res.redirect \//localhost:8080
+    res.redirect \//localhost:8080/close
 
 export flutter.connect
 export flutter.auth
