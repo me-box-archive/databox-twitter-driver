@@ -1,0 +1,32 @@
+{
+	"manifest-version": 1,
+
+	"name": "databox-twitter-driver",
+	"version": "0.1.0",
+
+	"description": "The Databox Docker container that provides twitter data",
+	"author": "Yousef Amar <yousef@amar.io> (http://yousefamar.com/)",
+	"license": "MIT",
+
+	"tags": [
+		"twitter",
+		"social",
+		"media",
+		"online",
+		"driver"
+	],
+
+	"homepage": "https://github.com/yousefamar/databox-twitter-driver",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yousefamar/databox-twitter-driver.git"
+	},
+
+	"network-permissions": [
+	],
+	"hardware-permissions": [
+	],
+
+	"resource-requirements": {
+	}
+}
