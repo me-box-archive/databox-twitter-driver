@@ -28,7 +28,7 @@ app.get '/connect' twitter.connect
 
 app.get '/callback' twitter.auth
 
-app.get '/api/*' (req, res) !->
+app.post '/api/*' (req, res) !->
   err, results <-! twitter.fetch req.params[0], req.body
   if err
     res.write-head 400

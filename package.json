@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "The Databox Docker container that provides twitter data",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lsc main.ls",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "docker build -t databox-twitter-driver . && docker tag databox-twitter-driver amar.io:5000/databox-twitter-driver && docker push amar.io:5000/databox-twitter-driver"
   },
   "repository": {
     "type": "git",
